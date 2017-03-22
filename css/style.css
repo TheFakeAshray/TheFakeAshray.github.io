@@ -18,12 +18,12 @@
 
 
 .main{
-    background: url(./images/main.jpg) 50% 0 no-repeat fixed;
+    background: url(../images/main.jpg) 50% 0 no-repeat fixed;
     height: 800px;
 }
 
 .about{
-    background: url(./images/slide6.jpg) 50% 0 no-repeat fixed;
+    background: url(../images/slide6.jpg) 50% 0 no-repeat fixed;
     background-color: white;
     min-height: 600px;
     padding: 100px 0;
