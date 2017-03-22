@@ -1,157 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-	   <link rel='shortcut icon' type='image/x-icon' href='img/favicon.ico' />
-	   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-       <title>Ashray Shetty - Try.</title>
-       <link rel="stylesheet" href="css/style.css"/>
-	   <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
-	   <link href='https://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
-	   <link href='https://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
-	   <link href='https://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
-	   <link href='https://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
+<html>
+    
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
 	  <link href='https://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
-	<script>
+    </head>
+    <body class="main">
+        <div id="main" class="main"> 
+            <div class="content">
+                <div class="main-text"> 
+                    <h2>Ashray Shetty</h2>
+                    <h1>Try Without Exception</h1>
+                </div>
+            </div>
+        </div>
 
-<!----- JQUERY FOR SLIDING NAVIGATION --->
-$(document).ready(function() {
-  $('a[href*=#]').each(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
-    && location.hostname == this.hostname
-    && this.hash.replace(/#/,'') ) {
-      var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
-      var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
-       if ($target) {
-         var targetOffset = $target.offset().top;
+        <div class="break">
+            <p>About Me!</p>
+        </div>
 
-<!----- JQUERY CLICK FUNCTION REMOVE AND ADD CLASS "ACTIVE" + SCROLL TO THE #DIV--->
-         $(this).click(function() {
-            $("#nav li a").removeClass("active");
-            $(this).addClass('active');
-           $('html, body').animate({scrollTop: targetOffset}, 1000);
-           return false;
-         });
-      }
-    }
-  });
+        <div class="about">
+            <div class="content-about">
+                <p class="content">I love working with anything electronic, especially code, and new technologies. I also find using these technologies to help or to communicate with people very enjoyable. When I find things that I enjoy doing, I work hard, efficiently, and give it my all. I work well in teams, often pushing the leadership role, however know when to step back if needed.</p>
+            </div>
+        </div>
 
-});
+        <div class="break">
+            <p>My Projects!</p>
+        </div>
 
-
-</script>
-
-
- </head>
-
-<body>
-
-<!----- HEADER START
-<header id="header">
-
-<div class="content">
-<div id="logo"><a href=""> AASH </a></div>
-<nav id="nav">
-	<ul>
-		<li><a href="#slide1" class="active" title="Next Section" >Slide 1</a></li>
-		<li><a href="#slide2" title="Next Section">Slide 2</a></li>
-		<li><a href="#slide3" title="Next Section">Slide 3</a></li>
-		<li><a  href="#slide4" title="Next Section">Slide 4</a></li>
-		<!-- <li><a href="#slide5" title="Next Section">Slide 5</a></li> -->
-	</ul>
-</nav>
-</div>
-</header>
-<!----- HEADER END--->
-
-<!----- SLIDES START --->
-	<div id="slide1">
-		<div class="content">
-            <h2>Ashray Shetty</h2>
-		    <h1>Try without exception</h1>
-		</div>
-    </div>
-
-	<div id="slide2">
-		<div class="content" >
-            <div class="quotes_container">
-		    <h3 class="quotes">Inspirational, Amazing, and All around Awesome.</h3>
-		  <img src="img/ash.png" align="left"/> <h4 class="author_name_gray">Ashray Shetty
-          </h4>
-		</div>
-		</div>
-    </div>
+        <div class="projects">
+            <div class="content">
+                <div class="col-sm-6 text-center">
+                    <div class="overlay">
+                        <p class="ptitle">PassPast</p>
+                        <div class="pbar"></div>
+                        <a href="http://legacy.passpast.net"> <img class="project" src="./images/passpast.png">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-6 text-center">
+                    <div class="overlay">
+                        <p class="ptitle">Tuber - WIP</p>
+                        <div class="pbar"></div>
+                        <a href="http://aloolabs.com"> <img class="project" src="./images/aloo.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
 
 
-   <div id="slide3">
-		<div class="content">
-			   <div class="quotes_container">
-		       <h3 class="quotes">"Literally a death ray" </h3>
-		      <img src="img/keshav.png" align="left"/> <h4 class="author_name_white">Keshav Kai 	</h4>
-		    </div>
-		</div>
-    </div>
 
-
-	<div id="slide4">
-		<div class="content">
-              <div class="quotes_container">
-		    <h3 class="quotes">“Ummmmm I hated you when I first met  you.” </h3>
-		  <img src="img/sam.png" align="left"/> <h4 class="author_name_gray">Sam Scott </h4>
-		</div>
-		</div>
-    </div>
-
-
-	<div id="slide5">
-		<div class="content">
-           <div class="quotes_container">
-		    <h3 class="quotes">“Just take one of my many quotable quotes that i have quoted.” </h3>
-		    <img src="img/rawiri.png" align="left"/> <h4 class="author_name_white">Rawiri Witehira </h4>
-		  </div>
-          </div>
-    </div>
-    <div id="slide6">
-		<div class="content">
-           <div class="quotes_container">
-		    <h3 class="quotes">“He's the guy who grins all the time” </h3>
-		    <img src="img/jasmine.png" align="left"/> <h4 class="author_name_red">Jasmine Olsen </h4>
-		  </div>
-          </div>
-    </div>
-	<div id="slide7">
-		<div class="content">
-           <div class="quotes_container">
-		    <h3 class="quotes"><font > “But what if there's nothing to say about you?” </font></h3>
-		    <img src="img/charles.png" align="left"/> <h4 class="author_name_white">Charles Jackson</h4>
-		  </div>
-          </div>
-    </div>
-    <div id="slide8">
-		<div class="content">
-           <div class="quotes_container">
-		    <h3 class="quotes">“But with two t's” </h3>
-		    <img src="img/alex.png" align="left"/> <h4 class="author_name_gray">Aliks </h4>
-		  </div>
-          </div>
-    </div>
-     <div id="slide9">
-		<div class="content">
-           <div class="quotes_container">
-		    <h3 class="quotes">“You like my oldest friend. You can put that on a resume or something” </h3>
-		    <img src="img/olivia.png" align="left"/> <h4 class="author_name_white">Olivia</h4>
-		  </div>
-          </div>
-    </div>
-    <div id="slide10">
-       <div class="content">
-          <div class="quotes_container">
-           <h3 class="quotes">Contact me! I'm hireable! Really!</h3>
-           <h3 class="quotes">thefakeashray@gmail.com</h3>
-         </div>
-         </div>
-   </div>
-
-<!----- SLIDES END --->
-
-</body>
 </html>
