@@ -24,9 +24,14 @@
 
 .about{
     background: url(../images/slide6.jpg) 50% 0 no-repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     background-color: white;
     min-height: 600px;
     padding: 100px 0;
+    
     /*overflow-y: auto;*/
 }
 .projects{
