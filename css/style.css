@@ -35,7 +35,7 @@ body{
     } */
 
 .about{
-    z-index: 10;
+    z-index: 2;
     position: relative;
     background: url(../images/3bw.jpg) 50% 0 no-repeat fixed;
     -webkit-background-size: cover;
