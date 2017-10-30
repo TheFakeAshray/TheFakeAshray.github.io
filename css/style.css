@@ -11,18 +11,32 @@
 */
 
 
-#body{
-    width: 100%;
-    
-}
 
+
+html {
+    height: 100%;
+}
+body{
+    width: 100%;
+    margin-top: 0;
+}
 
 .main{
     background: url(../images/main.jpg) 50% 0 no-repeat fixed;
-    height: 620px;
+    background-size: cover;
+    height: 100vh;
+    z-index: -2;
 }
+/* .dots:after {
+    content: '\2807';
+    font-size: 100px;
+    padding: 45%;
+    margin-bottom: 0px;
+    } */
 
 .about{
+    z-index: 10;
+    position: relative;
     background: url(../images/3bw.jpg) 50% 0 no-repeat fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -32,9 +46,11 @@
     min-height: 800px;
     padding: 100px 0;
     
+    
     /*overflow-y: auto;*/
 }
 .projects{
+    position: relative;
     background-color: white;
     min-height: 600px;
     padding: 50px 0;
@@ -62,6 +78,7 @@
     margin: 0 auto;
     width: 80%;
     font-size: 100%;
+    z-index: -2;
 }
 .content-about{
     /* background-color: black; */
@@ -122,14 +139,15 @@ img.project{
 
 .main-text{
     /*background: rgba(2,2,2,0.5);*/
-    margin-left: 0%;
+    /* margin-left: 0%;
     margin-right: 0%;
     margin-top: 25%;
-    margin-bottom: 25%;
+    margin-bottom: 25%; */
     /*width: 100%;*/
     color: white;
     text-align: center;
     font-family:'Raleway', sans-serif;
     font-size: 250%;
-    padding: 50px;
+    padding: 20%;
+    position: fixed;
 }
