@@ -42,9 +42,10 @@ getSteamGames = async () => {
 
 	xhr.onreadystatechange = () => {
 		if (xhr.readyState == 4 && xhr.status == 200) {
-			const response = JSON.parse(xhr.responseText);
-			document.getElementById('game_name').innerHTML = response.response.games[0].name;
-			document.getElementById('game_time').innerHTML = response.response.games[0].playtime_forever / 60;
+			const { response } = JSON.parse(xhr.responseText);
+			const { name, playtime_forever } = response.games[0];
+			document.getElementById('game_name').innerHTML = name;
+			document.getElementById('game_time').innerHTML = playtime_forever / 60;
 		}
 	};
 	xhr.open('GET', 'http://ashraystats.azurewebsites.net/steam/latestgames', true);
