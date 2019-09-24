@@ -1,4 +1,4 @@
-function UserAction() {
+getSteamGames = async () => {
 	var xhttp = new XMLHttpRequest();
 
 	xhttp.onreadystatechange = function() {
@@ -11,9 +11,9 @@ function UserAction() {
 	};
 	xhttp.open('GET', 'http://ashraystats.azurewebsites.net/steam/latestgames', true);
 	xhttp.send();
-}
+};
 
-function calculateAge() {
+calculateAge = () => {
 	// birthday is a date
 	var birthday = new Date('20 Dec 1996');
 	var curr = Date.now();
@@ -21,9 +21,9 @@ function calculateAge() {
 
 	var age = (diff / 31557600000).toFixed(7); // Divide by 1000*60*60*24*365.25
 	document.getElementById('my_age').innerHTML = age;
-}
+};
 
-function GetRank() {
+getRank = async () => {
 	var xhttp = new XMLHttpRequest();
 
 	xhttp.onreadystatechange = function() {
@@ -37,16 +37,16 @@ function GetRank() {
 	};
 	xhttp.open('GET', 'http://ashraystats.azurewebsites.net/lol/rank', true);
 	xhttp.send();
-}
+};
 
-function GetMovies() {
-    var xhttp = new XMLHttpRequest();
+getMovies = async () => {
+	var xhttp = new XMLHttpRequest();
 
 	xhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
 			// Typical action to be performed when the document is ready:
 			// Bronze, Silver, Gold, Diamond, Platinum, Master, Challenger
-            const response = JSON.parse(xhttp.responseText);
+			const response = JSON.parse(xhttp.responseText);
 			document.getElementById('movie_1').innerHTML = response[0].Title;
 			document.getElementById('movie_2').innerHTML = response[1].Title;
 			document.getElementById('movie_3').innerHTML = response[2].Title;
@@ -54,12 +54,12 @@ function GetMovies() {
 	};
 	xhttp.open('GET', 'http://ashraystats.azurewebsites.net/cinebuzz/getpastbookings', true);
 	xhttp.send();
-}
+};
 
-$(document).ready(function() {
+$(document).ready(() => {
 	calculateAge();
 	setInterval(calculateAge, 1000);
-	UserAction();
-    GetRank();
-    GetMovies();
+	getRank();
+	getMovies();
+	getSteamGames();
 });
