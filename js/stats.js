@@ -39,9 +39,27 @@ function GetRank() {
 	xhttp.send();
 }
 
+function GetMovies() {
+    var xhttp = new XMLHttpRequest();
+
+	xhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			// Typical action to be performed when the document is ready:
+			// Bronze, Silver, Gold, Diamond, Platinum, Master, Challenger
+            const response = JSON.parse(xhttp.responseText);
+			document.getElementById('movie_1').innerHTML = response[0].Title;
+			document.getElementById('movie_2').innerHTML = response[1].Title;
+			document.getElementById('movie_3').innerHTML = response[2].Title;
+		}
+	};
+	xhttp.open('GET', 'http://ashraystats.azurewebsites.net/cinebuzz/getpastbookings', true);
+	xhttp.send();
+}
+
 $(document).ready(function() {
 	calculateAge();
 	setInterval(calculateAge, 1000);
 	UserAction();
-	GetRank();
+    GetRank();
+    GetMovies();
 });
