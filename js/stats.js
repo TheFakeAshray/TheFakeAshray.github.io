@@ -28,9 +28,9 @@ getMovies = async () => {
 	xhr.onreadystatechange = () => {
 		if (xhr.readyState == 4 && xhr.status == 200) {
 			const response = JSON.parse(xhr.responseText);
-			document.getElementById('movie_1').innerHTML = response[0].Title;
-			document.getElementById('movie_2').innerHTML = response[1].Title;
-			document.getElementById('movie_3').innerHTML = response[2].Title;
+			document.getElementById('movie_1').innerHTML = response[0].title;
+			document.getElementById('movie_2').innerHTML = response[1].title;
+			document.getElementById('movie_3').innerHTML = response[2].title;
 		}
 	};
 	xhr.open('GET', 'http://ashraystats.azurewebsites.net/cinebuzz/getpastbookings', true);
